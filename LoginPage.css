@@ -1,0 +1,40 @@
+#input {
+    color: white;
+    margin: auto;
+    width: 40%;
+    padding: 70px 0;
+    text-align: center;
+    border: 6px inset #196191;
+    border-radius: 0px 40px 0px 40px;
+    background: #003A6F;
+    background: -moz-linear-gradient(-45deg, #003A6F 0%, #44D9E6 100%, #003A6F 100%);
+    background: -webkit-linear-gradient(-45deg, #003A6F 0%, #44D9E6 100%, #003A6F 100%);
+    background: linear-gradient(135deg, #003A6F 0%, #44D9E6 100%, #003A6F 100%);
+
+}
+
+a {
+    color: white;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    width: 40%;
+}
+
+#bouton {
+    background-color: #44d9e6;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
