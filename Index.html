@@ -93,11 +93,19 @@
 <div id="footer">
     <img src="Logo.png" id="image">
 
+    <select id="colorSelection">
+        <option value="red">Red</option>
+        <option value="white">white</option>
+        <option value="yellow">Yellow</option>
+    </select>
+
     <div class="copyright">&copy;2021 infotransport.ma</div>
 
 </div>
 
 </body>
+
+
 <script type="text/javascript">
     document.getElementById("login").onclick = function () {
         location.href = "LoginPage.html";
@@ -109,7 +117,23 @@
             .then(json => renderHTML(json.data))
     }
 
+    function renderHTML(json) {
+        console.log(json)
+        let result = "<div>"
 
+        for (let i = 0; i < json.length; i++) {
+            const element = json[i];
+            result += "<h1 id='" + i + "'>" + element ['first_name'] + " " + element ['last_name'] + "</h1>";
+            result += "<img src='" + element ['avatar'] + "' onclick='changeContentColor(" + i + ")'>";
+        }
+        result += "</div>"
+        document.getElementById("content").innerHTML = result;
+    }
+
+    function changeContentColor(i) {
+        document.getElementById(i).style.color = document.getElementById("colorSelection").value;
+    }
 
 </script>
+
 </html>
