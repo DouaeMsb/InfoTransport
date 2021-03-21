@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="index.css">
 </head>
 
-
 <body>
 
 <div id="Header" align="center">
@@ -95,8 +94,22 @@
     <img src="Logo.png" id="image">
 
     <div class="copyright">&copy;2021 infotransport.ma</div>
+
 </div>
 
 </body>
+<script type="text/javascript">
+    document.getElementById("login").onclick = function () {
+        location.href = "LoginPage.html";
+    };
 
+    function getTodo() {
+        fetch('https://reqres.in/api/users%27')
+            .then(reponse => reponse.json())
+            .then(json => renderHTML(json.data))
+    }
+
+
+
+</script>
 </html>

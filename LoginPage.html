@@ -14,7 +14,7 @@
 <div id="input">
     <b>Email:</b> <input type="email" id="email" placeholder="give your email"><br>
     <b>Password:</b> <input type="password" id="password" placeholder="give your password"><br>
-    <button id="bouton" type="button" ><b>login</b></button><br>
+    <button id="bouton" type="button" onclick="login()"><b>login</b></button><br>
 
     <div id="output">
 
@@ -31,5 +31,13 @@
 </div>
 
 </body>
+<script>
+    function login() {
+        var emailInput = document.getElementById("email");
+        var passwordInput = document.getElementById("password");
+
+        document.getElementById("output").innerHTML = emailInput.value + " " + passwordInput.value
+    }
+</script>
 
 </html>
